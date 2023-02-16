@@ -1,4 +1,10 @@
-window.VerifyUserController = function ($rootScope, $scope, $location,$http,$cookies) {
+window.VerifyUserController = function (
+  $rootScope,
+  $scope,
+  $location,
+  $http,
+  $cookies
+) {
   $rootScope.user = {
     config: false,
   };
@@ -7,26 +13,23 @@ window.VerifyUserController = function ($rootScope, $scope, $location,$http,$coo
     $scope.listUsers = response.data;
   });
   $scope.verify_user = function (event) {
-    event.preventDefault(); 
+    event.preventDefault();
     $scope.listUsers.forEach((element) => {
       if (
         element.password == $scope.user.password &&
         element.email == $scope.user.email
       ) {
-        if(element.role == 2){
-        $location.path("/home");
-        element.config = false;
-        }
-        else 
-        {
+        if (element.role == 2) {
+          $location.path("/home");
+        } else {
           $location.path("/admin/categories");
-          element.config = true;
         }
-        $cookies.putObject('user',element);
+        $cookies.putObject("user", element);
+        $rootScope.myLayout = String($location.path()).includes("/admin");
         return;
-        }else{
-          $scope.failed = true;
-        }
+      } else {
+        $scope.failed = true;
+      }
     });
   };
 };

@@ -28,11 +28,7 @@
     />
     <link rel="stylesheet" href="../css/custom/style.css" />
   </head>
-  <body
-    ng-init="user.config = false"
-    class="pb-0"
-    data-layout="{{!user.config ? 'topnav' : ''}}"
-  >
+  <body class="pb-0" data-layout="{{myLayout ? '' : 'topnav'}}">
     <ng-view></ng-view>
     <!-- Js plugin -->
     <script src="../js/plugin/jquery-3.3.1.min.js"></script>
@@ -42,28 +38,31 @@
     <script src="../assets/js/app.min.js"></script>
     <script src="../js/plugin/owl.carousel.min.js"></script>
     <script src="config/api.js"></script>
+
     <!-- angular -->
     <script src="../lib/angular.min.js"></script>
     <script src="../lib/angular-route.min.js"></script>
     <script src="../lib/angular-cookies.min.js"></script>
-    <!-- Category controller -->
+    <script src="controller/user/verify-user-controller.js"></script>
     <script src="controller/category/category-controller.js"></script>
+    <script src="controller/product/product-controller.js"></script>
+    <!-- Category controller -->
     <script src="controller/category/category-add-controller.js"></script>
     <script src="controller/category/category-delete-controller.js"></script>
     <script src="controller/category/category-update-controller.js"></script>
     <!-- Product Controller -->
-    <script src="controller/product/product-controller.js"></script>
+
     <script src="controller/product/product-add-controller.js"></script>
     <script src="controller/product/product-update-controller.js"></script>
     <script src="controller/product/product-details-controller.js"></script>
     <script src="controller/product/product-delete-controller.js"></script>
     <!-- User controller -->
-    <script src="controller/user/verify-user-controller.js"></script>
     <script src="controller/user/log-out-controller.js"></script>
     <script src="controller/user/sign-up-controller.js"></script>
     <script src="controller/user/change-password-controller.js"></script>
     <!-- Cart controller -->
     <script src="controller/cart/shopping-cart-controller.js"></script>
     <script src="route.js"></script>
+    <script src="config/myDirective.js"></script>
   </body>
 </html>

@@ -165,29 +165,22 @@
       "role": 1
     },
     {
-      "id": "user2",
-      "firstName": "John",
-      "lastName": "Smith",
-      "email": "name2@example.com",
-      "password": "123",
-      "role": 2
-    },
-    {
       "config": false,
       "role": 2,
       "firstName": "John",
       "lastName": "Sena",
       "email": "name3@example.com",
-      "password": "123",
+      "password": "122",
       "id": "9l2hsah"
     },
     {
-      "config": false,
       "role": 2,
-      "id": "GGanEbE"
+      "firstName": "Nguyen Duy",
+      "lastName": "Hung",
+      "email": "test@gmail",
+      "password": "123",
+      "id": "xZj8WKU"
     }
   ],
-  "cart": [
-    {}
-  ]
+  "cart": [{}]
 }

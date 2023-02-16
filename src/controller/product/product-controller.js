@@ -3,8 +3,10 @@ window.ProductController = function (
   $rootScope,
   $http,
   $timeout,
-  $cookies
+  $cookies,
+  $location
 ) {
+  $rootScope.myLayout = String($location.path()).includes("/admin");
   $scope.c_filter = {
     category: {},
   };
@@ -26,6 +28,10 @@ window.ProductController = function (
       angular.element(document.querySelector(".owl-carousel")).owlCarousel({
         margin: 10,
         nav: true,
+        loop: true,
+        autoplay: true,
+        autoplayTimeout: 1000,
+        autoplayHoverPause: true,
         responsive: {
           0: {
             items: 1,

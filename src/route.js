@@ -10,6 +10,9 @@ myApp.config(function ($routeProvider, $locationProvider) {
     .when("/about", {
       templateUrl: "pages/customer/about.html",
     })
+    .when("/contact", {
+      templateUrl: "pages/customer/contact.html",
+    })
     .when("/events", {
       templateUrl: "pages/customer/event.html",
     })
