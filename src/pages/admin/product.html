@@ -1,0 +1,109 @@
+<div class="wrapper">
+  <nav ng-include="'layout/admin/navbar.html'"></nav>
+  <div class="content-page">
+    <div class="content">
+      <header class="header" ng-include="'layout/admin/header.html'"></header>
+
+      <section>
+        <div class="container-fluid">
+          <!-- start page title -->
+          <div class="row">
+            <div class="col-12">
+              <div class="page-title-box">
+                <h4 class="page-title">products</h4>
+              </div>
+            </div>
+          </div>
+          <!-- end page title -->
+
+          <div class="row">
+            <div class="col-12">
+              <div class="card">
+                <div class="card-body">
+                  <div class="row mb-2">
+                    <div class="col-lg-8">
+                      <form class="form-inline">
+                        <div class="form-group mb-2">
+                          <label for="inputPassword2" class="sr-only"
+                            >Search</label
+                          >
+                          <input
+                            type="search"
+                            class="form-control"
+                            id="inputPassword2"
+                            placeholder="Search..."
+                            ng-model="search.id"
+                          />
+                        </div>
+                      </form>
+                    </div>
+                    <div class="col-lg-4">
+                      <div class="text-lg-right">
+                        <a
+                          href="#admin/products/add"
+                          class="btn btn-danger mb-2"
+                        >
+                          <i class="mdi mdi-basket mr-1"></i> Add New Product
+                        </a>
+                      </div>
+                    </div>
+                    <!-- end col-->
+                  </div>
+
+                  <div class="table-responsive">
+                    <table class="table table-centered mb-0">
+                      <thead class="thead-light">
+                        <tr>
+                          <th>ID</th>
+                          <th>Name</th>
+                          <th>Category</th>
+                          <th>Price</th>
+                          <th>Quantity</th>
+                          <th style="width: 125px">Action</th>
+                        </tr>
+                      </thead>
+                      <tbody>
+                        <tr ng-repeat="p in listProducts | filter: search">
+                          <td>{{p.id}}</td>
+                          <td>{{p.name}}</td>
+                          <td>{{p.category.name}}</td>
+                          <td>{{p.price}}</td>
+                          <td>{{p.quantity}}</td>
+                          <td>
+                            <a
+                              href="#admin/products/details/{{p.id}}"
+                              class="action-icon"
+                            >
+                              <i class="mdi mdi-eye"></i
+                            ></a>
+                            <a
+                              href="#admin/products/update/{{p.id}}"
+                              class="action-icon"
+                            >
+                              <i class="mdi mdi-square-edit-outline"></i
+                            ></a>
+                            <a
+                              href="#admin/products/delete/{{p.id}}"
+                              class="action-icon"
+                            >
+                              <i class="mdi mdi-delete"></i
+                            ></a>
+                          </td>
+                        </tr>
+                      </tbody>
+                    </table>
+                  </div>
+                </div>
+                <!-- end card-body-->
+              </div>
+              <!-- end card-->
+            </div>
+            <!-- end col -->
+          </div>
+          <!-- end row -->
+        </div>
+      </section>
+    </div>
+    <footer class="footer" ng-include="'layout/admin/footer.html'"></footer>
+  </div>
+</div>

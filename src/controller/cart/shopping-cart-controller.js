@@ -1,0 +1,3 @@
+window.ShoppingCartController = function(){
+    
+}

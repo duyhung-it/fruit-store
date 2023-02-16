@@ -1,0 +1,193 @@
+{
+  "products": [
+    {
+      "name": "Chuối chín",
+      "category": {
+        "name": "Trái cây",
+        "id": 1
+      },
+      "price": 10000,
+      "quantity": 100,
+      "description": "Trong quá trình chuối chín, lượng tinh bột trong chuối sẽ chuyển hóa thành đường đơn. Do có nhiều đường hơn nên chuối chín giúp hệ tiêu hóa hoạt động và hấp thu các dưỡng chất tốt hơn. Hơn nữa, chuối chín còn chứa một lương chất chống oxy hóa lớn hơn chuối xanh.",
+      "image": "banana.png",
+      "id": 1
+    },
+    {
+      "image": "cherry.png",
+      "name": "Quả Cherry",
+      "category": {
+        "name": "Trái cây",
+        "id": 1
+      },
+      "price": 20000,
+      "quantity": 100,
+      "description": "Cherry Hàn Quốc",
+      "id": 2
+    },
+    {
+      "image": "orange.png",
+      "name": "Quả Cam",
+      "category": {
+        "name": "Trái cây",
+        "id": 1
+      },
+      "price": 15000,
+      "quantity": 111,
+      "description": "Cam Hà Giang",
+      "id": 3
+    },
+    {
+      "image": "mango.png",
+      "name": "Quả Xoài",
+      "category": {
+        "name": "Trái cây",
+        "id": 1
+      },
+      "price": 25000,
+      "quantity": 123,
+      "description": "Xoài Cát",
+      "id": 4
+    },
+    {
+      "image": "peach.png",
+      "name": "Quả Đào",
+      "category": {
+        "name": "Trái cây",
+        "id": 1
+      },
+      "price": 500000,
+      "quantity": 5,
+      "description": "Đào Nhật Bản",
+      "id": 5
+    },
+    {
+      "image": "product-1.jpg",
+      "name": "Ghế Nhựa Bình Dương",
+      "category": {
+        "name": "Ghế Nhựa",
+        "id": 2
+      },
+      "price": 20000,
+      "quantity": 5,
+      "description": "Ghế Nhựa Bình Dương",
+      "id": 6
+    },
+    {
+      "category": {
+        "name": "Ghế Nhựa",
+        "id": 2
+      },
+      "name": "Ghế Nhựa Bình Dương",
+      "price": 20000,
+      "quantity": 5,
+      "description": "Ghế Nhựa Bình Dương",
+      "image": "product-2.jpg",
+      "id": 7
+    },
+    {
+      "category": {
+        "name": "Ghế Nhựa",
+        "id": 2
+      },
+      "name": "Ghế Nhựa Bình Dương",
+      "price": 20000,
+      "quantity": 5,
+      "description": "Ghế Nhựa Bình Dương",
+      "image": "product-3.jpg",
+      "id": 8
+    },
+    {
+      "category": {
+        "name": "Ghế Nhựa",
+        "id": 2
+      },
+      "name": "Ghế Nhựa Bình Dương",
+      "price": 20000,
+      "quantity": 5,
+      "description": "Ghế Nhựa Bình Dương",
+      "image": "product-4.jpg",
+      "id": 9
+    },
+    {
+      "category": {
+        "name": "Ghế Nhựa",
+        "id": 2
+      },
+      "name": "Ghế Nhựa Bình Dương",
+      "price": 20000,
+      "quantity": 5,
+      "description": "Ghế Nhựa Bình Dương",
+      "image": "product-5.jpg",
+      "id": 10
+    },
+    {
+      "category": {
+        "name": "Ghế Nhựa",
+        "id": 2
+      },
+      "name": "Ghế Nhựa Bình Dương",
+      "price": 20000,
+      "quantity": 5,
+      "description": "Ghế Nhựa Bình Dương",
+      "image": "product-6.jpg",
+      "id": 11
+    },
+    {
+      "image": "watermelon.png",
+      "name": "Dưa Hấu",
+      "category": {
+        "name": "Trái cây",
+        "id": 1
+      },
+      "price": 5000,
+      "quantity": 20,
+      "description": "Dưa Hấu USA",
+      "id": 12
+    }
+  ],
+  "categories": [
+    {
+      "name": "Trái cây",
+      "id": 1
+    },
+    {
+      "name": "Ghế Nhựa",
+      "id": 2
+    }
+  ],
+  "users": [
+    {
+      "id": "user1",
+      "firstName": "John",
+      "lastName": "Smith",
+      "email": "name@example.com",
+      "password": "123",
+      "role": 1
+    },
+    {
+      "id": "user2",
+      "firstName": "John",
+      "lastName": "Smith",
+      "email": "name2@example.com",
+      "password": "123",
+      "role": 2
+    },
+    {
+      "config": false,
+      "role": 2,
+      "firstName": "John",
+      "lastName": "Sena",
+      "email": "name3@example.com",
+      "password": "123",
+      "id": "9l2hsah"
+    },
+    {
+      "config": false,
+      "role": 2,
+      "id": "GGanEbE"
+    }
+  ],
+  "cart": [
+    {}
+  ]
+}

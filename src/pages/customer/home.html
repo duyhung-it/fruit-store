@@ -1,0 +1,134 @@
+<div class="wrapper">
+  <div class="content-page">
+    <header class="header" ng-include="'layout/customer/header.html'"></header>
+    <section>
+      <div class="container-fluid">
+        <div class="top-content d-none d-md-block">
+          <div class="row">
+            <div class="col-sm-3">
+              <div class="row">
+                <div
+                  ng-repeat="p in listProducts | limitTo : '2'"
+                  class="col-lg-12"
+                >
+                  <div class="box card">
+                    <a href="#products/details/{{p.id}}">
+                      <div class="img-box">
+                        <img
+                          src="../assets/images/products/{{p.image}}"
+                          alt=""
+                        />
+                      </div>
+                      <div class="detail-box">
+                        <h6>{{p.name}}</h6>
+                        <h6>
+                          <span> {{(p.price ) + ' ' + "VNĐ"}}</span>
+                        </h6>
+                      </div>
+                    </a>
+                  </div>
+                </div>
+              </div>
+            </div>
+            <div
+              class="col-sm-6 d-flex align-items-center"
+              ng-repeat="p in listProducts | limitTo : '1'"
+            >
+              <div class="box card">
+                <a href="#products/details/{{p.id}}">
+                  <div class="img-box">
+                    <img src="../assets/images/products/{{p.image}}" alt="" />
+                  </div>
+                  <div class="detail-box">
+                    <h6>{{p.name}}</h6>
+                    <h6>
+                      <span> {{(p.price ) + ' ' + "VNĐ"}}</span>
+                    </h6>
+                  </div>
+                </a>
+              </div>
+            </div>
+            <div class="col-sm-3">
+              <div class="row">
+                <div
+                  ng-repeat="p in listProducts | limitTo : '2'"
+                  class="col-lg-12"
+                >
+                  <div class="box card">
+                    <a href="#products/details/{{p.id}}">
+                      <div class="img-box">
+                        <img
+                          src="../assets/images/products/{{p.image}}"
+                          alt=""
+                        />
+                      </div>
+                      <div class="detail-box">
+                        <h6>{{p.name}}</h6>
+                        <h6>
+                          <span> {{(p.price ) + ' ' + "VNĐ"}}</span>
+                        </h6>
+                      </div>
+                    </a>
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+        <div class="popular-content">
+          <div class="content-title">
+            <h2><i class="fa fa-star"></i>Sản phẩm hot</h2>
+          </div>
+          <div class="row">
+            <div class="owl-carousel owl-theme">
+              <div ng-repeat="p in listProducts" class="item">
+                <div class="box card">
+                  <a href="#products/details/{{p.id}}">
+                    <div class="img-box">
+                      <img src="../assets/images/products/{{p.image}}" alt="" />
+                    </div>
+                    <div class="detail-box">
+                      <h6>{{p.name}}</h6>
+                      <h6>
+                        <span> {{(p.price ) + ' ' + "VNĐ"}}</span>
+                      </h6>
+                    </div>
+                  </a>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+        <div class="new-content">
+          <div class="content-title">
+            <h2>
+              <h2><i class="fa fa-star"></i>Sản phẩm mới</h2>
+            </h2>
+          </div>
+          <div class="row">
+            <div
+              ng-repeat="p in listProducts"
+              class="col-lg-3 col-md-4 col-sm-6"
+            >
+              <div class="box card">
+                <a href="#products/details/{{p.id}}">
+                  <div class="img-box">
+                    <img src="../assets/images/products/{{p.image}}" alt="" />
+                  </div>
+                  <div class="detail-box">
+                    <h6>{{p.name}}</h6>
+                    <h6>
+                      <span> {{(p.price ) + '' + "VNĐ"}}</span>
+                    </h6>
+                  </div>
+                </a>
+              </div>
+              <div style="clear: both"></div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+    <footer class="footer" ng-include="'layout/customer/footer.html'"></footer>
+  </div>
+</div>
