@@ -1,18 +1,25 @@
 window.ProductDetailsController = function (
   $scope,
   $routeParams,
-  $cookies,
   $http,
-  $timeout
+  $timeout,
+  $rootScope,
+  $cookies
 ) {
   $scope.user = $cookies.getObject("user");
   let id = $routeParams.id;
+  $scope.quantity = 1;
+  $rootScope.quantity_to_add = 1;
+  $scope.onQuantityChange = function () {
+    $rootScope.quantity_to_add = $scope.quantity;
+  };
   $http.get(productAPI + "/" + id).then(function (response) {
     $scope.product = response.data;
   });
   $http.get(productAPI).then(function (response) {
     $scope.listProducts = response.data;
   });
+
   angular.element(document).ready(function () {
     $timeout(function () {
       angular.element(document.querySelector(".owl-carousel")).owlCarousel({

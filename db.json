@@ -182,5 +182,69 @@
       "id": "xZj8WKU"
     }
   ],
-  "cart": [{}]
+  "cart": [
+    {
+      "id": 1,
+      "user_id": "9l2hsah",
+      "products": [
+        {
+          "id": 1,
+          "price": 10000,
+          "quantity": 12,
+          "status": "giỏ hàng",
+          "image": "banana.png",
+          "name": "Chuối chín"
+        },
+        {
+          "id": 2,
+          "price": 20000,
+          "quantity": 1,
+          "status": "giỏ hàng",
+          "image": "cherry.png",
+          "name": "Quả Cherry"
+        },
+        {
+          "id": 4,
+          "price": 25000,
+          "status": "giỏ hàng",
+          "quantity": 2,
+          "image": "mango.png",
+          "name": "Quả Xoài"
+        },
+        {
+          "id": 7,
+          "price": 20000,
+          "quantity": 1,
+          "status": "giỏ hàng",
+          "image": "product-2.jpg",
+          "name": "Ghế Nhựa Bình Dương"
+        },
+        {
+          "id": 3,
+          "price": 15000,
+          "quantity": 1,
+          "status": "giỏ hàng",
+          "image": "orange.png",
+          "name": "Quả Cam"
+        },
+        {
+          "id": 6,
+          "price": 20000,
+          "quantity": 2,
+          "status": "giỏ hàng",
+          "image": "product-1.jpg",
+          "name": "Ghế Nhựa Bình Dương"
+        },
+        {
+          "id": 5,
+          "price": 500000,
+          "quantity": 1,
+          "status": "giỏ hàng",
+          "image": "peach.png",
+          "name": "Quả Đào"
+        }
+      ],
+      "grand_total": 100000
+    }
+  ]
 }

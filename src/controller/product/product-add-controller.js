@@ -11,7 +11,7 @@ window.ProductAddController = function ($scope, $http, $location) {
   };
   $scope.addOrUpdate = function (event) {
     event.preventDefault();
-    $http.post(productAPI, $scope.request).then(function (response) {
+    $http.post(productAPI, $scope.request).then(function () {
       // $scope.listCategories.push(response.data);
       alert("Added productss successfully");
       $location.path("/admin/products");

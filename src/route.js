@@ -28,6 +28,10 @@ myApp.config(function ($routeProvider, $locationProvider) {
       templateUrl: "pages/customer/product-detail.html",
       controller: ProductDetailsController,
     })
+    .when("/products/add-to-cart/:id", {
+      templateUrl: "pages/customer/product-detail.html",
+      controller: AddToCartController,
+    })
     .when("/admin/home", {
       templateUrl: "pages/admin/dash-board.html",
       controller: ProductController,

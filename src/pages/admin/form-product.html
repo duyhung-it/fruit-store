@@ -1,14 +1,10 @@
-
 <div class="wrapper">
   <nav ng-include="'layout/admin/navbar.html'"></nav>
   <div class="content-page">
     <div class="content">
-      <header
-        class="header"
-        ng-include="'layout/admin/header.html'"
-      ></header>
+      <header class="header" ng-include="'layout/admin/header.html'"></header>
 
-      <section >
+      <section>
         <form class="needs-validation" novalidate>
           <div class="form-group mb-3">
             <label for="validationCustom01">Id</label>
@@ -86,7 +82,7 @@
               type="file"
               id="formFile"
               ng-model="request.image"
-              onchange="angular.element(this).scope().fileName(this)"
+              ngChange="angular.element(this).scope().fileName(this)"
             />
           </div>
           <button

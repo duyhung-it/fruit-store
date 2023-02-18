@@ -10,19 +10,18 @@ window.ProductController = function (
   $scope.c_filter = {
     category: {},
   };
+  $rootScope.user = $cookies.getObject("user");
   $rootScope.listProducts = [];
-  $scope.listCategories = [];
-  $rootScope.user = {};
+  $rootScope.listCategories = [];
   $http.get(productAPI).then(function (response) {
     $rootScope.listProducts = response.data;
   });
   $http.get(categoryAPI).then(function (response) {
-    $scope.listCategories = response.data;
+    $rootScope.listCategories = response.data;
   });
   $scope.filterByCategory = function (c) {
     $scope.c_filter.category.id = c.id;
   };
-  $rootScope.user = $cookies.getObject("user");
   angular.element(document).ready(function () {
     $timeout(function () {
       angular.element(document.querySelector(".owl-carousel")).owlCarousel({
