@@ -19,7 +19,7 @@
                     <div class="detail-box">
                       <h6>{{p.name}}</h6>
                       <h6>
-                        <span> {{(p.price ) + ' ' + "VNĐ"}}</span>
+                        <span> {{(p.price | currency)}}</span>
                       </h6>
                     </div>
                   </a>
@@ -47,7 +47,7 @@
                   <div class="detail-box">
                     <h6>{{p.name}}</h6>
                     <h6>
-                      <span> {{(p.price ) + '' + "VNĐ"}}</span>
+                      <span> {{(p.price | currency)}}</span>
                     </h6>
                   </div>
                 </a>

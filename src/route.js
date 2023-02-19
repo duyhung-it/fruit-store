@@ -7,6 +7,10 @@ myApp.config(function ($routeProvider, $locationProvider) {
       templateUrl: "pages/customer/home.html",
       controller: ProductController,
     })
+    .when("/products/:page", {
+      templateUrl: "pages/customer/product.html",
+      controller: ProductController,
+    })
     .when("/about", {
       templateUrl: "pages/customer/about.html",
     })
