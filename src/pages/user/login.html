@@ -25,19 +25,34 @@
         <p class="text-muted mb-4">
           Enter your email address and password to access account.
         </p>
-
+        <div class="alert-box">
+          <div
+            class="alert alert-danger alert-dismissible"
+            ng-show="showAlertError"
+            role="alert"
+          >
+            {{alert.errorMessage}}
+          </div>
+        </div>
         <!-- form -->
         <form action="#">
           <div class="form-group">
             <label for="emailaddress">Email address</label>
             <input
               class="form-control"
-              type="email"
+              type="text"
               id="emailaddress"
               required=""
               placeholder="Enter your email"
               ng-model="user.email"
             />
+            <div
+              class="alert alert-light alert-custom"
+              ng-show="showAlertEmail"
+              role="alert"
+            >
+              {{alert.email}}
+            </div>
           </div>
           <div class="form-group">
             <a href="javascript: void(0);" class="text-muted float-right"
@@ -52,6 +67,13 @@
               placeholder="Enter your password"
               ng-model="user.password"
             />
+            <div
+              class="alert alert-light alert-custom"
+              ng-show="showAlertPass"
+              role="alert"
+            >
+              {{alert.password}}
+            </div>
           </div>
           <div class="form-group mb-3">
             <div class="custom-control custom-checkbox">
@@ -115,9 +137,7 @@
         <footer class="footer footer-alt">
           <p class="text-muted">
             Don't have an account?
-            <a href="#sign-up" class="text-muted ml-1"
-              ><b>Sign Up</b></a
-            >
+            <a href="#sign-up" class="text-muted ml-1"><b>Sign Up</b></a>
           </p>
         </footer>
       </div>

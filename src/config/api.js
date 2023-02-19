@@ -3,3 +3,4 @@ window.productAPI = url + "/products";
 window.categoryAPI = url + "/categories";
 window.userAPI = url + "/users";
 window.cartAPI = url + "/cart";
+window.orderAPI = url + "/orders";

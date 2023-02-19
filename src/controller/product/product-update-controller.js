@@ -4,6 +4,7 @@ window.ProductUpdateController = function (
   $location,
   $routeParams
 ) {
+  $scope.myLayout = String($location.path()).includes("/admin");
   $scope.buttonTitle = "Update Product";
   let id = $routeParams.id;
   $http.get(productAPI + "/" + id).then(function (response) {

@@ -1,4 +1,6 @@
-window.ProductAddController = function ($scope, $http, $location) {
+window.ProductAddController = function ($scope, $http, $location, $cookies) {
+  $scope.myLayout = String($location.path()).includes("/admin");
+  $scope.user = $cookies.getObject("user");
   $scope.request = {};
   $scope.buttonTitle = "Add Product";
   $http.get(categoryAPI).then(function (response) {
@@ -11,8 +13,8 @@ window.ProductAddController = function ($scope, $http, $location) {
   };
   $scope.addOrUpdate = function (event) {
     event.preventDefault();
+    $scope.request.createdDate = new Date().getTime();
     $http.post(productAPI, $scope.request).then(function () {
-      // $scope.listCategories.push(response.data);
       alert("Added productss successfully");
       $location.path("/admin/products");
     });

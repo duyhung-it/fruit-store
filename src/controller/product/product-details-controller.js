@@ -4,8 +4,10 @@ window.ProductDetailsController = function (
   $http,
   $timeout,
   $rootScope,
-  $cookies
+  $cookies,
+  $location
 ) {
+  $rootScope.myLayout = String($location.path()).includes("/admin");
   $scope.user = $cookies.getObject("user");
   let id = $routeParams.id;
   $scope.quantity = 1;

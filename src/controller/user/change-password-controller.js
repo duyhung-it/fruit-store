@@ -11,6 +11,7 @@ window.ChangePasswordController = function (
     $location.path("/login");
     return false;
   }
+  $scope.alert = {};
   $scope.request = {
     oldPassword: "",
     newPassword: "",
@@ -19,16 +20,25 @@ window.ChangePasswordController = function (
   $scope.changePassword = function (event) {
     event.preventDefault();
     if ($scope.request.oldPassword.length == 0) {
-      alert("Vui lòng nhập mật khẩu cũ");
+      $scope.alert.oldPassword = "Vui lòng nhập mật khẩu cũ!";
+      $scope.showAlertOldPassword = true;
       return;
+    } else {
+      $scope.showAlertOldPassword = false;
     }
     if ($scope.request.newPassword.length == 0) {
-      alert("Vui lòng nhập mật khẩu mới");
+      $scope.alert.newPassword = "Vui lòng nhập mật mới!";
+      $scope.showAlertNewPassword = true;
       return;
+    } else {
+      $scope.showAlertNewPassword = false;
     }
     if (String($scope.request.confirmPassword).length == 0) {
-      alert("Vui lòng xác nhận mật khẩu mới");
+      $scope.alert.confirmPassword = "Vui lòng nhập xác nhận mật khẩu mới!";
+      $scope.showAlertConfirmPassword = true;
       return;
+    } else {
+      $scope.showAlertConfirmPassword = false;
     }
     if ($scope.request.newPassword == $scope.request.confirmPassword) {
       if ($scope.request.oldPassword == $rootScope.user.password) {
@@ -39,10 +49,12 @@ window.ChangePasswordController = function (
             alert("Thay đổi mật khẩu thành công!");
           });
       } else {
-        alert("Mật khẩu cũ không chính xác!");
+        $scope.alert.oldPassword = "Mật khẩu cũ không chính xác";
+        $scope.showAlertOldPassword = true;
       }
     } else {
-      alert("Xác nhận mật khẩu mới thất bại!");
+      $scope.alert.confirmPassword = "Xác nhận mật khẩu không chính xác!";
+      $scope.showAlertConfirmPassword = true;
     }
   };
 };

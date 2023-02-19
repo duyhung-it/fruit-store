@@ -10,8 +10,17 @@ window.ShoppingCartController = function (
     //if data of user changed, this function will update cart to store user's value when the button checkout are clicked.
     $http.put(cartAPI + "/" + $scope.cart.id, $scope.cart);
   };
+  $scope.removeProduct = function (index, event) {
+    event.preventDefault();
+    if (index !== undefined) {
+      $scope.cart.grand_total -=
+        $scope.cart.products[index].price *
+        $scope.cart.products[index].quantity;
+      $scope.cart.products.splice(index, 1);
+      $http.put(cartAPI + "/" + $scope.cart.id, $scope.cart);
+    }
+  };
   if (angular.isDefined($scope.user)) {
-    $scope.listProducts = [];
     $scope.cart = {
       id: "",
       user_id: $scope.user.id,

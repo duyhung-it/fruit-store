@@ -38,11 +38,13 @@
               placeholder="Enter your name"
               ng-model="user.firstName"
             />
-            <span
-              ng-model="error.firstName"
-              class="message-error"
-              ng-show="error.firstName"
-            ></span>
+            <div
+              class="alert alert-light alert-custom"
+              ng-show="showAlertFirstName"
+              role="alert"
+            >
+              {{alert.firstName}}
+            </div>
           </div>
           <div class="form-group">
             <label for="fullname">Last Name</label>
@@ -53,11 +55,13 @@
               placeholder="Enter your name"
               ng-model="user.lastName"
             />
-            <span
-              ng-model="error.lastName"
-              class="message-error"
-              ng-show="error.lastName"
-            ></span>
+            <div
+              class="alert alert-light alert-custom"
+              ng-show="showAlertLastName"
+              role="alert"
+            >
+              {{alert.lastName}}
+            </div>
           </div>
           <div class="form-group">
             <label for="emailaddress">Email address</label>
@@ -68,7 +72,13 @@
               placeholder="Enter your email"
               ng-model="user.email"
             />
-            <span ng-model="error.email" class="message-error"></span>
+            <div
+              class="alert alert-light alert-custom"
+              ng-show="showAlertEmail"
+              role="alert"
+            >
+              {{alert.email}}
+            </div>
           </div>
           <div class="form-group">
             <label for="password">Password</label>
@@ -79,7 +89,13 @@
               placeholder="Enter your password"
               ng-model="user.password"
             />
-            <span ng-model="error.password" class="message-error"></span>
+            <div
+              class="alert alert-light alert-custom"
+              ng-show="showAlertPass"
+              role="alert"
+            >
+              {{alert.password}}
+            </div>
           </div>
           <div ng-hide="true" class="form-group">
             <input

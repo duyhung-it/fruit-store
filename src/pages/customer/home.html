@@ -36,7 +36,7 @@
           </div>
           <div class="row">
             <div
-              ng-repeat="p in listProducts"
+              ng-repeat="p in listProducts | orderBy: p.createdDate : true"
               class="col-lg-3 col-md-4 col-sm-6"
             >
               <div class="box card">

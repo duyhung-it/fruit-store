@@ -10,6 +10,7 @@
       "quantity": 100,
       "description": "Trong quá trình chuối chín, lượng tinh bột trong chuối sẽ chuyển hóa thành đường đơn. Do có nhiều đường hơn nên chuối chín giúp hệ tiêu hóa hoạt động và hấp thu các dưỡng chất tốt hơn. Hơn nữa, chuối chín còn chứa một lương chất chống oxy hóa lớn hơn chuối xanh.",
       "image": "banana.png",
+      "createdDate": 1676792826095,
       "id": 1
     },
     {
@@ -22,6 +23,7 @@
       "price": 20000,
       "quantity": 100,
       "description": "Cherry Hàn Quốc",
+      "createdDate": 1676792826095,
       "id": 2
     },
     {
@@ -34,6 +36,7 @@
       "price": 15000,
       "quantity": 111,
       "description": "Cam Hà Giang",
+      "createdDate": 1676792826095,
       "id": 3
     },
     {
@@ -46,6 +49,7 @@
       "price": 25000,
       "quantity": 123,
       "description": "Xoài Cát",
+      "createdDate": 1676792826095,
       "id": 4
     },
     {
@@ -58,6 +62,7 @@
       "price": 500000,
       "quantity": 5,
       "description": "Đào Nhật Bản",
+      "createdDate": 1676792826095,
       "id": 5
     },
     {
@@ -70,6 +75,7 @@
       "price": 20000,
       "quantity": 5,
       "description": "Ghế Nhựa Bình Dương",
+      "createdDate": 1676792826095,
       "id": 6
     },
     {
@@ -82,6 +88,7 @@
       "quantity": 5,
       "description": "Ghế Nhựa Bình Dương",
       "image": "product-2.jpg",
+      "createdDate": 1676792826095,
       "id": 7
     },
     {
@@ -94,6 +101,7 @@
       "quantity": 5,
       "description": "Ghế Nhựa Bình Dương",
       "image": "product-3.jpg",
+      "createdDate": 1676792826095,
       "id": 8
     },
     {
@@ -106,6 +114,7 @@
       "quantity": 5,
       "description": "Ghế Nhựa Bình Dương",
       "image": "product-4.jpg",
+      "createdDate": 1676792826090,
       "id": 9
     },
     {
@@ -118,6 +127,7 @@
       "quantity": 5,
       "description": "Ghế Nhựa Bình Dương",
       "image": "product-5.jpg",
+      "createdDate": 1676792826097,
       "id": 10
     },
     {
@@ -130,19 +140,34 @@
       "quantity": 5,
       "description": "Ghế Nhựa Bình Dương",
       "image": "product-6.jpg",
+      "createdDate": 1676792826095,
       "id": 11
     },
     {
-      "image": "watermelon.png",
-      "name": "Dưa Hấu",
+      "name": "Ghế Nhựa Bình Dương",
+      "category": {
+        "name": "Ghế Nhựa",
+        "id": 2
+      },
+      "price": 12000,
+      "quantity": 123,
+      "description": "Ghế Nhựa Bình Dương",
+      "image": "product-6.jpg",
+      "createdDate": 1676792826095,
+      "id": 12
+    },
+    {
+      "name": "KIWI",
       "category": {
         "name": "Trái cây",
         "id": 1
       },
-      "price": 5000,
-      "quantity": 20,
-      "description": "Dưa Hấu USA",
-      "id": 12
+      "price": 123000,
+      "quantity": 123,
+      "description": "aaa",
+      "image": "kiwi.png",
+      "createdDate": 1676793023615,
+      "id": 13
     }
   ],
   "categories": [
@@ -180,6 +205,14 @@
       "email": "test@gmail",
       "password": "123",
       "id": "xZj8WKU"
+    },
+    {
+      "role": 2,
+      "firstName": "Nguyen Duy",
+      "lastName": "Hung",
+      "email": "test@gmail",
+      "password": "123",
+      "id": "vq_W2Ry"
     }
   ],
   "cart": [
@@ -198,7 +231,7 @@
         {
           "id": 2,
           "price": 20000,
-          "quantity": 1,
+          "quantity": 6,
           "status": "giỏ hàng",
           "image": "cherry.png",
           "name": "Quả Cherry"
@@ -242,9 +275,62 @@
           "status": "giỏ hàng",
           "image": "peach.png",
           "name": "Quả Đào"
+        },
+        {
+          "id": 8,
+          "price": 20000,
+          "quantity": 1,
+          "status": "giỏ hàng",
+          "image": "product-3.jpg",
+          "name": "Ghế Nhựa Bình Dương"
         }
       ],
-      "grand_total": 100000
+      "grand_total": 220000
+    },
+    {
+      "id": 11,
+      "user_id": "vq_W2Ry",
+      "products": []
+    }
+  ],
+  "orders": [
+    {
+      "id": 1,
+      "user_id": "vq_W2Ry",
+      "products": [
+        {
+          "id": 1,
+          "price": 10000,
+          "quantity": 56,
+          "status": "giỏ hàng",
+          "image": "banana.png",
+          "name": "Chuối chín"
+        },
+        {
+          "id": 2,
+          "price": 20000,
+          "quantity": 18,
+          "status": "giỏ hàng",
+          "image": "cherry.png",
+          "name": "Quả Cherry"
+        },
+        {
+          "id": 2,
+          "price": 20000,
+          "quantity": 9,
+          "status": "giỏ hàng",
+          "image": "cherry.png",
+          "name": "Quả Cherry"
+        },
+        {
+          "id": 6,
+          "price": 20000,
+          "quantity": 3,
+          "status": "giỏ hàng",
+          "image": "product-1.jpg",
+          "name": "Ghế Nhựa Bình Dương"
+        }
+      ]
     }
   ]
 }

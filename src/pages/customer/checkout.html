@@ -1,0 +1,230 @@
+<div class="wrapper">
+  <div class="content-page">
+    <header class="header" ng-include="'layout/customer/header.html'"></header>
+    <section>
+      <div class="container-fluid">
+        <!-- start page title -->
+        <div class="row">
+          <div class="col-12">
+            <div class="page-title-box">
+              <h4 class="page-title">Checkout</h4>
+            </div>
+          </div>
+        </div>
+        <!-- end page title -->
+
+        <div class="row">
+          <div class="col-12">
+            <div class="card">
+              <div class="card-body">
+                <!-- Checkout Steps -->
+                <ul class="nav nav-pills bg-nav-pills nav-justified mb-3">
+                  <li class="nav-item">
+                    <a
+                      href="javascript:void(0)"
+                      data-toggle="tab"
+                      aria-expanded="false"
+                      class="nav-link rounded-0"
+                    >
+                      <i class="mdi mdi-account-circle font-18"></i>
+                      <span class="d-none d-lg-block">Billing Info</span>
+                    </a>
+                  </li>
+                </ul>
+
+                <!-- Steps Information -->
+                <div class="tab-content">
+                  <!-- Billing Content-->
+                  <div class="tab-pane show active" id="billing-information">
+                    <div class="row">
+                      <div class="col-lg-8">
+                        <h4 class="mt-2">Billing information</h4>
+
+                        <p class="text-muted mb-4">
+                          Fill the form below in order to send you the order's
+                          invoice.
+                        </p>
+
+                        <form>
+                          <div class="row">
+                            <div class="col-md-6">
+                              <div class="form-group">
+                                <label for="billing-first-name"
+                                  >First Name</label
+                                >
+                                <input
+                                  class="form-control"
+                                  type="text"
+                                  placeholder="Enter your first name"
+                                  id="billing-first-name"
+                                  ng-model="user.firstName"
+                                />
+                              </div>
+                            </div>
+                            <div class="col-md-6">
+                              <div class="form-group">
+                                <label for="billing-last-name">Last Name</label>
+                                <input
+                                  class="form-control"
+                                  type="text"
+                                  placeholder="Enter your last name"
+                                  id="billing-last-name"
+                                  ng-model="user.lastName"
+                                />
+                              </div>
+                            </div>
+                          </div>
+                          <!-- end row -->
+                          <div class="row">
+                            <div class="col-md-12">
+                              <div class="form-group">
+                                <label for="billing-email-address"
+                                  >Email Address
+                                  <span class="text-danger">*</span></label
+                                >
+                                <input
+                                  class="form-control"
+                                  type="email"
+                                  placeholder="Enter your email"
+                                  id="billing-email-address"
+                                  ng-model="user.email"
+                                />
+                              </div>
+                            </div>
+                          </div>
+                          <!-- end row -->
+                          <div class="row">
+                            <div class="col-12">
+                              <div class="form-group">
+                                <label for="billing-address">Address</label>
+                                <input
+                                  class="form-control"
+                                  type="text"
+                                  placeholder="Enter full address"
+                                  id="billing-address"
+                                />
+                              </div>
+                            </div>
+                          </div>
+                          <!-- end row -->
+
+                          <div class="row">
+                            <div class="col-12">
+                              <div class="form-group mt-3">
+                                <label for="example-textarea"
+                                  >Order Notes:</label
+                                >
+                                <textarea
+                                  class="form-control"
+                                  id="example-textarea"
+                                  rows="3"
+                                  placeholder="Write some note.."
+                                ></textarea>
+                              </div>
+                            </div>
+                          </div>
+                          <!-- end row -->
+
+                          <div class="row mt-4">
+                            <div class="col-sm-6">
+                              <a
+                                href="#cart"
+                                class="btn text-muted d-none d-sm-inline-block btn-link font-weight-semibold"
+                              >
+                                <i class="mdi mdi-arrow-left"></i> Back to
+                                Shopping Cart
+                              </a>
+                            </div>
+                            <!-- end col -->
+                            <div class="col-sm-6">
+                              <div class="text-sm-right">
+                                <a
+                                  href="javascript:void(0)"
+                                  ng-click="processCheckout()"
+                                  class="btn btn-danger"
+                                >
+                                  <i class="mdi mdi-truck-fast mr-1"></i>
+                                  Proceed to Shipping
+                                </a>
+                              </div>
+                            </div>
+                            <!-- end col -->
+                          </div>
+                          <!-- end row -->
+                        </form>
+                      </div>
+                      <div class="col-lg-4">
+                        <div class="border p-3 mt-4 mt-lg-0 rounded">
+                          <h4 class="header-title mb-3">Order Summary</h4>
+
+                          <div class="table-responsive">
+                            <table class="table table-centered mb-0">
+                              <tbody>
+                                <tr ng-repeat="p in listProducts track by p.id">
+                                  <td>
+                                    <img
+                                      src="../assets/images/products/{{p.image}}"
+                                      alt="contact-img"
+                                      title="contact-img"
+                                      class="rounded mr-2"
+                                      height="48"
+                                    />
+                                    <p class="m-0 d-inline-block align-middle">
+                                      <a
+                                        href="#products/details/{{p.id}}"
+                                        class="text-body font-weight-semibold"
+                                        >{{p.name}}</a
+                                      >
+                                      <br />
+                                      <small
+                                        >{{p.quantity + ' x ' + (p.price |
+                                        currency)}}</small
+                                      >
+                                    </p>
+                                  </td>
+                                  <td class="text-right">
+                                    {{(p.quantity * p.price) | currency }}
+                                  </td>
+                                </tr>
+
+                                <tr class="text-right"></tr>
+                                <tr class="text-right">
+                                  <td>
+                                    <h6 class="m-0">Shipping:</h6>
+                                  </td>
+                                  <td class="text-right">FREE</td>
+                                </tr>
+                                <tr class="text-right">
+                                  <td>
+                                    <h5 class="m-0">Total:</h5>
+                                  </td>
+                                  <td class="text-right font-weight-semibold">
+                                    {{carts.grand_total | currency}}
+                                  </td>
+                                </tr>
+                              </tbody>
+                            </table>
+                          </div>
+                          <!-- end table-responsive -->
+                        </div>
+                        <!-- end .border-->
+                      </div>
+                      <!-- end col -->
+                    </div>
+                    <!-- end row-->
+                  </div>
+                </div>
+                <!-- end tab content-->
+              </div>
+              <!-- end card-body-->
+            </div>
+            <!-- end card-->
+          </div>
+          <!-- end col -->
+        </div>
+        <!-- end row-->
+      </div>
+    </section>
+    <footer class="footer" ng-include="'layout/customer/footer.html'"></footer>
+  </div>
+</div>

@@ -51,7 +51,7 @@
                 </div>
                 <div class="row">
                   <div
-                    ng-repeat="p in listProducts | filter: c_filter"
+                    ng-repeat="p in listProducts | orderBy: p.category | filter: c_filter "
                     class="col-lg-3 col-md-4 col-sm-6"
                   >
                     <div class="box card">
@@ -65,7 +65,7 @@
                         <div class="detail-box">
                           <h6>{{p.name}}</h6>
                           <h6>
-                            <span> {{(p.price ) + ' ' + "VNĐ"}}</span>
+                            <span> {{(p.price | currency) }}</span>
                           </h6>
                         </div>
                       </a>

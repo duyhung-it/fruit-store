@@ -16,6 +16,10 @@ myApp.config(function ($routeProvider, $locationProvider) {
     .when("/events", {
       templateUrl: "pages/customer/event.html",
     })
+    .when("/checkout/:id", {
+      templateUrl: "pages/customer/checkout.html",
+      controller: CheckoutController,
+    })
     .when("/cart", {
       templateUrl: "pages/customer/shopping-cart.html",
       controller: ShoppingCartController,
@@ -31,6 +35,10 @@ myApp.config(function ($routeProvider, $locationProvider) {
     .when("/products/add-to-cart/:id", {
       templateUrl: "pages/customer/product-detail.html",
       controller: AddToCartController,
+    })
+    .when("/products/products-bought/:id", {
+      templateUrl: "pages/customer/products-bought.html",
+      controller: ProductsBoughtController,
     })
     .when("/admin/home", {
       templateUrl: "pages/admin/dash-board.html",

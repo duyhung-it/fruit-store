@@ -135,3 +135,13 @@ legend {
 }
 
 /* footer */
+
+/* alter */
+
+.alert-custom {
+  height: 15px;
+  display: flex;
+  padding: 15px 0 0 0;
+  align-items: center;
+  color: red;
+}
