@@ -46,6 +46,10 @@
             aria-haspopup="false"
             aria-expanded="false"
           >
+          <span class="position-absolute top-50 start-100 translate-middle badge rounded-pill ">
+            {{quantityProductInCart}}
+            <span class="visually-hidden">unread messages</span>
+          </span>
             <i class="dripicons-cart noti-icon"></i>
           </a>
         </li>
@@ -91,7 +95,7 @@
             </a>
           </div>
         </li>
-        <li ng-show="user == undefined" class="notification-list">
+        <li ng-show="user == undefined" class="notification-list d-flex flex-row p-3">
           <a
             class="nav-link"
             href="#login"
@@ -207,3 +211,4 @@
     </div>
   </div>
 </div>
+

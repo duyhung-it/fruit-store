@@ -135,7 +135,9 @@ legend {
 }
 
 /* footer */
-
+.footer {
+  position: unset;
+}
 /* alter */
 
 .alert-custom {

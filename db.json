@@ -297,7 +297,25 @@
     {
       "id": 11,
       "user_id": "vq_W2Ry",
-      "products": []
+      "products": [
+        {
+          "id": 4,
+          "price": 25000,
+          "quantity": 2,
+          "status": "giỏ hàng",
+          "image": "mango.png",
+          "name": "Quả Xoài"
+        },
+        {
+          "id": 3,
+          "price": 15000,
+          "quantity": 2,
+          "status": "giỏ hàng",
+          "image": "orange.png",
+          "name": "Quả Cam"
+        }
+      ],
+      "grand_total": 80000
     },
     {
       "id": 12

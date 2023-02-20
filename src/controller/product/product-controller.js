@@ -10,6 +10,8 @@ window.ProductController = function (
 ) {
   $scope.currentPage = 1;
   $scope.limit = 12;
+  $scope.totalPages = 1;
+  $scope.listPages = [1];
   $scope.nextPage = function () {
     if ($scope.currentPage < Math.floor($scope.totalPages)) {
       $scope.currentPage = Number($scope.currentPage) + 1;
@@ -33,8 +35,6 @@ window.ProductController = function (
     $rootScope.listProducts = response.data;
     if ($rootScope.listPaging == undefined)
       $rootScope.listPaging = response.data;
-    $scope.totalPages = 1;
-    $scope.listPages = [1];
     pagination();
   });
   $http.get(categoryAPI).then(function (response) {

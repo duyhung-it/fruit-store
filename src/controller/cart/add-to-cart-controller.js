@@ -76,7 +76,8 @@ window.AddToCartController = function (
         $scope.listProducts.push($scope.product_to_add);
       }
       $scope.cart.products = $scope.listProducts;
-      $scope.cart.grand_total += product.price * $scope.product_to_add.quantity;
+      let total_grand = product.price * $scope.quantity_to_add;
+      $scope.cart.grand_total += total_grand;
     };
   } else {
     $location.path("/login");
