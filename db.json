@@ -392,7 +392,79 @@
   ],
   "cart": [
     {
+      "id": 1
+    },
+    {
+      "id": 11
+    },
+    {
+      "id": 12
+    },
+    {
+      "id": 13,
+      "user_id": "user1",
+      "products": []
+    },
+    {
+      "id": 14,
+      "user_id": "vq_W2Ry",
+      "products": [
+        {
+          "id": 3,
+          "price": 15000,
+          "quantity": 1,
+          "status": "giỏ hàng",
+          "image": "orange.png",
+          "name": "Quả Cam"
+        }
+      ],
+      "grand_total": null
+    },
+    {
+      "id": 15,
+      "user_id": "9l2hsah",
+      "products": []
+    }
+  ],
+  "orders": [
+    {
       "id": 1,
+      "user_id": "vq_W2Ry",
+      "products": [
+        {
+          "id": 2,
+          "price": 20000,
+          "quantity": 22,
+          "status": "giỏ hàng",
+          "image": "cherry.png",
+          "name": "Quả Cherry"
+        }
+      ]
+    },
+    {
+      "id": 2,
+      "user_id": "user1",
+      "products": [
+        {
+          "id": 1,
+          "price": 10000,
+          "quantity": 4,
+          "status": "giỏ hàng",
+          "image": "banana.png",
+          "name": "Chuối chín"
+        },
+        {
+          "id": 13,
+          "price": 222222,
+          "quantity": 3,
+          "status": "giỏ hàng",
+          "image": "ghe-go3.png",
+          "name": "Ghế Gỗ"
+        }
+      ]
+    },
+    {
+      "id": 3,
       "user_id": "9l2hsah",
       "products": [
         {
@@ -458,61 +530,6 @@
           "status": "giỏ hàng",
           "image": "product-3.jpg",
           "name": "Ghế Nhựa Bình Dương"
-        }
-      ],
-      "grand_total": 220000
-    },
-    {
-      "id": 11
-    },
-    {
-      "id": 12
-    },
-    {
-      "id": 13,
-      "user_id": "user1",
-      "products": []
-    },
-    {
-      "id": 14,
-      "user_id": "vq_W2Ry",
-      "products": []
-    }
-  ],
-  "orders": [
-    {
-      "id": 1,
-      "user_id": "vq_W2Ry",
-      "products": [
-        {
-          "id": 2,
-          "price": 20000,
-          "quantity": 22,
-          "status": "giỏ hàng",
-          "image": "cherry.png",
-          "name": "Quả Cherry"
-        }
-      ]
-    },
-    {
-      "id": 2,
-      "user_id": "user1",
-      "products": [
-        {
-          "id": 1,
-          "price": 10000,
-          "quantity": 4,
-          "status": "giỏ hàng",
-          "image": "banana.png",
-          "name": "Chuối chín"
-        },
-        {
-          "id": 13,
-          "price": 222222,
-          "quantity": 3,
-          "status": "giỏ hàng",
-          "image": "ghe-go3.png",
-          "name": "Ghế Gỗ"
         }
       ]
     }
