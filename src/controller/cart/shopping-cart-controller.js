@@ -8,6 +8,11 @@ window.ShoppingCartController = function (
   $rootScope.user = $cookies.getObject("user");
   $scope.checkout = function () {
     //if data of user changed, this function will update cart to store user's value when the button checkout are clicked.
+    $scope.cart.grand_total = 0;
+    $scope.cart.products.forEach((elment) => {
+      let totalGrand = elment.price * elment.quantity;
+      $scope.cart.grand_total += totalGrand;
+    });
     $http.put(cartAPI + "/" + $scope.cart.id, $scope.cart);
   };
   $scope.removeProduct = function (index, event) {

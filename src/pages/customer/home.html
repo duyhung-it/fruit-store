@@ -10,7 +10,7 @@
       </div>
       <div class="row">
         <div class="owl-carousel owl-theme">
-          <div ng-repeat="p in listProducts" class="item">
+          <div ng-repeat="p in listProducts | limitTo: 10" class="item">
             <div class="box card">
               <a href="#products/details/{{p.id}}">
                 <div class="img-box">
